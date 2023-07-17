@@ -1,0 +1,14 @@
+{% extends 'feedback/base.html' %}
+
+{% block title %} Один отзыв {% endblock %}
+
+{% block content %}
+
+  <h2>Информация об отзыве</h2>
+  <h3>Имя - {{ feed.name }}</h3>
+  <h3>Фамилия - {{ feed.surname }}</h3>
+  <h3>Рейтинг - {{ feed.rating }}</h3>
+
+<p>{{ feed.feedback }}</p>
+
+{% endblock %}

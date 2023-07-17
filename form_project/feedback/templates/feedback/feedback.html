@@ -1,0 +1,20 @@
+{% extends 'feedback/base.html' %}
+
+{% block title %} Add Feedback {% endblock %}
+
+{% block content %}
+  <h2>Оставьте отзыв</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field.errors }}
+                {{ field }}
+            </div>
+        {% endfor %}
+
+        <button>Отправить</button>
+    </form>
+{% endblock %}
